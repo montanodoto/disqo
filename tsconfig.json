@@ -1,25 +1,64 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "jsx": "preserve",
-    "lib": ["dom", "es2017"],
-    "moduleResolution": "node",
+    "target": "es5",
+    "downlevelIteration": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
-    "noEmit": true,
-    "strict": true,
-    "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "removeComments": false,
-    "preserveConstEnums": true,
-    "sourceMap": true,
-    "esModuleInterop": true,
+    "strict": false,
     "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "ESNext",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "baseUrl": "./",
+    "paths": {
+      "components/*": [
+        "components/*"
+      ],
+      "hooks/*": [
+        "hooks/*"
+      ],
+      "utils/*": [
+        "utils/*"
+      ],
+      "types/*": [
+        "types/*"
+      ],
+      "constants/*": [
+        "constants/*"
+      ],
+      "pages/*": [
+        "pages/*"
+      ],
+      "store/*": [
+        "store/*"
+      ],
+      "models/*": [
+        "models/*"
+      ]
+    }
   },
-  "exclude": ["node_modules"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+  "exclude": [
+    "node_modules",
+    ".next",
+    "out"
+  ],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/__test__/hashtag.test.js",
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js"
+  ]
 }
